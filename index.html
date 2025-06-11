@@ -6,16 +6,50 @@
   <meta name="description" content="Quadro Áries da VERBA - arte exclusiva e personalizada em estilo Bauhaus moderno. Compre já o seu." />
   <meta name="keywords" content="Quadro Áries, arte Bauhaus, decoração signo áries, arte exclusiva, presente criativo" />
   <meta name="author" content="VERBA - Verbum, Expressio, Vox" />
-  <title>Quadro Áries — Arte Exclusiva da VERBA</title>
-  <link rel="icon" href="icon.png" type="image/png" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://caveiradiadema.github.io/verba-site/" />
+  <link rel="icon" href="icon.png" type="image/png" />
+
+  <!-- Open Graph (WhatsApp, Facebook) -->
+  <meta property="og:title" content="VERBA — Quadro Áries Exclusivo" />
+  <meta property="og:description" content="Arte sofisticada e moderna inspirada no signo de Áries. Descubra a coleção VERBA." />
+  <meta property="og:image" content="https://caveiradiadema.github.io/verba-site/logo.png" />
+  <meta property="og:url" content="https://caveiradiadema.github.io/verba-site/" />
+  <meta property="og:type" content="product" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quadro Áries — VERBA" />
+  <meta name="twitter:description" content="Arte moderna e única inspirada no signo de Áries, estilo Bauhaus." />
+  <meta name="twitter:image" content="https://caveiradiadema.github.io/verba-site/logo.png" />
+
+  <!-- JSON-LD (Schema.org para SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Quadro Áries",
+    "image": "https://caveiradiadema.github.io/verba-site/Aries.png",
+    "description": "Arte Bauhaus moderna do signo de Áries feita pela marca VERBA.",
+    "brand": { "@type": "Brand", "name": "VERBA" },
+    "offers": {
+      "@type": "Offer",
+      "price": "249.90",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "url": "https://caveiradiadema.github.io/verba-site/"
+    }
+  }
+  </script>
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341691198145403" crossorigin="anonymous"></script>
 
   <!-- Google Fonts e AOS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341691198145403" crossorigin="anonymous"></script>
+  <title>Quadro Áries — Arte Exclusiva da VERBA</title>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -130,25 +164,25 @@
 <body>
   <div id="particles-js"></div>
   <header data-aos="fade-down">
-    <img src="logo.png" alt="Logo da marca VERBA — Arte exclusiva" class="logo">
+    <img src="logo.png" alt="Logo da marca VERBA — Arte exclusiva" class="logo" loading="lazy">
     <p class="subtitle">Verbum, Expressio, Vox</p>
   </header>
 
   <main>
     <nav class="carousel-vertical" data-aos="fade-right">
       <button data-img="Aries.png" aria-label="Ver quadro Áries">
-        <img src="Aries.png" alt="Miniatura do quadro Áries">
+        <img src="Aries.png" alt="Miniatura do quadro Áries" loading="lazy">
       </button>
       <button data-img="sala1.png" aria-label="Ver quadro em sala 1">
-        <img src="sala1.png" alt="Quadro Áries em sala decorada 1">
+        <img src="sala1.png" alt="Quadro Áries em sala decorada 1" loading="lazy">
       </button>
       <button data-img="sala2.png" aria-label="Ver quadro em sala 2">
-        <img src="sala2.png" alt="Quadro Áries em sala decorada 2">
+        <img src="sala2.png" alt="Quadro Áries em sala decorada 2" loading="lazy">
       </button>
     </nav>
 
     <section class="quadro-imagem" data-aos="zoom-in">
-      <img id="quadroExibido" src="Aries.png" alt="Visualização do quadro Áries" draggable="false">
+      <img id="quadroExibido" src="Aries.png" alt="Visualização do quadro Áries" loading="lazy" draggable="false">
     </section>
   </main>
 
