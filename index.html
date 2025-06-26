@@ -7,8 +7,11 @@
   <meta name="keywords" content="Quadro Áries, arte Bauhaus, decoração signo áries, arte exclusiva, presente criativo" />
   <meta name="author" content="VERBA - Verbum, Expressio, Vox" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://caveiradiadema.github.io/verba-site/" />
+  <link rel="canonical" href="https://caveiradiadema.github.io/" />
   <link rel="icon" href="icon.png" type="image/png" />
+
+  <!-- AMP Ad Library -->
+  <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
   <!-- Open Graph -->
   <meta property="og:title" content="VERBA — Quadro Áries Exclusivo" />
@@ -26,7 +29,7 @@
   <meta name="twitter:description" content="Arte moderna e única inspirada no signo de Áries, estilo Bauhaus." />
   <meta name="twitter:image" content="https://caveiradiadema.github.io/verba-site/verba-logo.png" />
 
-  <!-- Schema.org -->
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,7 +40,7 @@
     "brand": { "@type": "Brand", "name": "VERBA" },
     "offers": {
       "@type": "Offer",
-      "price": "329.90",
+      "price": "249.90",
       "priceCurrency": "BRL",
       "availability": "https://schema.org/InStock",
       "url": "https://caveiradiadema.github.io/verba-site/"
@@ -45,15 +48,7 @@
   }
   </script>
 
-  <!-- AMP Ads -->
-  <script async custom-element="amp-auto-ads"
-    src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-  </script>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341691198145403" crossorigin="anonymous"></script>
-
-  <!-- Fonts e animações -->
+  <!-- Google Fonts + AOS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
@@ -68,11 +63,10 @@
       overflow-x: hidden;
     }
     #particles-js {
-      position: absolute;
+      position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
       z-index: -1;
-      pointer-events: none;
     }
     header {
       text-align: center;
@@ -95,6 +89,7 @@
       margin: 2rem auto;
       max-width: 1200px;
       padding: 0 1rem;
+      min-height: 80vh;
     }
     .carousel-vertical {
       display: flex;
@@ -131,7 +126,7 @@
     }
     .info {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 5rem;
     }
     .price {
       font-size: 1.5rem;
@@ -170,9 +165,17 @@
     }
   </style>
 </head>
-
 <body>
-  <amp-auto-ads type="adsense" data-ad-client="ca-pub-6341691198145403"></amp-auto-ads>
+  <!-- AMP Ad -->
+  <amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-6341691198145403"
+     data-ad-slot="7913516518"
+     data-auto-format="rspv"
+     data-full-width="">
+    <div overflow=""></div>
+  </amp-ad>
+
   <div id="particles-js"></div>
 
   <header data-aos="fade-down">
@@ -200,12 +203,12 @@
 
   <div class="info" data-aos="fade-up">
     <p class="price">R$ 329,99</p>
-    <a class="buy-btn" href="https://produto.mercadolivre.com.br/MLB-5459201494" target="_blank" rel="noopener noreferrer">Comprar pelo Mercado Livre</a>
+    <a class="buy-btn" href="https://produto.mercadolivre.com.br/MLB-4653636097-quadro-decorativo-aries-40x50cm-moldura-preta-e-vidro-_JM" target="_blank">Comprar no Mercado Livre</a>
   </div>
 
   <section class="contact" data-aos="fade-up">
-    <p>Quer uma arte feita só pra você?</p>
-    <a href="https://wa.me/5511993957268?text=Olá,%20gostaria%20de%20pedir%20uma%20arte%20personalizada%20com%20a%20VERBA!" target="_blank" rel="noopener noreferrer">Peça sua arte personalizada ao artista</a>
+    <p>Quer algo personalizado, diferente ou sob medida?</p>
+    <a href="https://wa.me/5511993957268?text=Olá,%20quero%20criar%20uma%20arte%20personalizada%20com%20a%20VERBA!" target="_blank">Fale diretamente com a artista</a>
   </section>
 
   <footer data-aos="fade-up">
