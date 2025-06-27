@@ -11,8 +11,8 @@ particlesJS('particles-js', {
 
 // --- Dados do nosso site ---
 const signos = [
-    { nome: 'aries', pronto: true, preco: 'R$ 329,99', img: 'Aries.png', galeria: ['Aries.png', 'salaAries1.png', 'salaAries2.png'] },
-    { nome: 'peixes', pronto: true, preco: 'R$ 329,99', img: 'Peixes.png', galeria: ['Peixes.png', 'salaPeixes1.png', 'salaPeixes2.png'] },
+    { nome: 'aries', pronto: true, preco: 'R$ 329,99', img: 'Aries.png', galeria: ['Aries.png', 'salaAries1.png', 'salaAries2.png'], link: 'https://produto.mercadolivre.com.br/MLB-4653636097' },
+    { nome: 'peixes', pronto: true, preco: 'R$ 329,99', img: 'Peixes.png', galeria: ['Peixes.png', 'salaPeixes1.png', 'salaPeixes2.png'], link: 'https://produto.mercadolivre.com.br/MLB-5460314820' },
     ...['touro','gemeos','cancer','leao','virgem','libra','escorpiao','sagitario','capricornio','aquario'].map(s => ({
       nome: s,
       pronto: false,
