@@ -405,16 +405,16 @@
         galeria.appendChild(tag);
       });
 
-      fetch(`https://aztro.sameerkumar.website/?sign=${signoNome}&day=today`, {
-        method: 'POST'
-      })
-      .then(res => res.json())
-      .then(data => {
-        horoscopo.innerText = `Horóscopo de hoje para ${signoNome.toUpperCase()}:\n` + data.description;
-      })
-      .catch(() => {
-        horoscopo.innerText = "Não foi possível carregar o horóscopo.";
-      });
+   fetch(`https://aztro.sameerkumar.website/?sign=${signoNome}&day=today`, {
+  method: 'POST'
+})
+.then(res => res.json())
+.then(data => {
+  horoscopo.innerText = `Horóscopo de hoje para ${signoNome.toUpperCase()}:\n` + data.description;
+})
+.catch(() => {
+  horoscopo.innerText = "Não foi possível carregar o horóscopo.";
+});
 
       document.getElementById('galeria-modal').style.display = 'block';
     }
