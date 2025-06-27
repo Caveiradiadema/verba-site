@@ -3,334 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Quadros dos Signos | VERBA - Arte Exclusiva em Estilo Bauhaus</title>
   <meta name="description" content="Encontre o quadro perfeito do seu signo. Arte exclusiva da VERBA em estilo Bauhaus para Áries, Touro, Gêmeos e mais. Decore com personalidade ou dê um presente inesquecível." />
   <meta name="keywords" content="quadro signo, decoração astrologia, quadro áries, quadro touro, quadro gêmeos, leão, virgem, libra, escorpião, sagitário, capricórnio, aquário, peixes, arte bauhaus, presente criativo, verba" />
   <meta name="author" content="VERBA - Verbum, Expressio, Vox" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://caveiradiadema.github.io/" />
   <link rel="icon" href="icon.png" type="image/png" />
-
-  <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Quadro Decorativo Signo de Áries - Coleção VERBA",
-      "image": "https://caveiradiadema.github.io/Aries.png",
-      "description": "Quadro exclusivo do signo de Áries em estilo Bauhaus moderno. Uma peça de arte única para decorar seu ambiente ou para um presente criativo.",
-      "brand": {
-        "@type": "Brand",
-        "name": "VERBA"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://produto.mercadolivre.com.br/MLB-4653636097",
-        "priceCurrency": "BRL",
-        "price": "329.99",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
-      }
-    },
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Quadro Decorativo Signo de Peixes - Coleção VERBA",
-      "image": "https://caveiradiadema.github.io/Peixes.png",
-      "description": "Quadro exclusivo do signo de Peixes em estilo Bauhaus moderno, capturando a essência sonhadora e artística do signo.",
-      "brand": {
-        "@type": "Brand",
-        "name": "VERBA"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://wa.me/5511993957268?text=Olá%2C%20quero%20comprar%20o%20quadro%20Peixes",
-        "priceCurrency": "BRL",
-        "price": "329.99",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
-      }
-    }
-    /* Adicione o Schema para os outros signos quando estiverem disponíveis */
-  ]
-  </script>
-
+  
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: #0c0c0c;
-      color: #f5f5f5;
-      font-family: 'Raleway', sans-serif;
-      overflow-x: hidden;
-    }
-    #particles-js {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 2rem 1rem;
-    }
-    header img.logo {
-      max-width: 140px;
-      margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-    /* H1 adicionado para SEO */
-    h1 {
-      text-align: center;
-      padding: 1rem 2rem;
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #f5f5f5;
-    }
-    main.vitrine {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem 3rem;
-    }
-    .quadro-card {
-      background: #1a1a1a;
-      border-radius: 8px;
-      padding: 1rem;
-      width: 280px;
-      text-align: center;
-      box-shadow: 0 0 12px rgba(0,0,0,0.6);
-      transition: transform 0.3s ease;
-    }
-    .quadro-card:hover {
-      transform: scale(1.05);
-    }
-    .quadro-thumb {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      object-fit: cover;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
-      transition: all 0.4s ease;
-    }
-    .quadro-thumb:hover {
-      transform: scale(1.03);
-    }
-    .quadro-card h2 {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #fff;
-    }
-    .price {
-      font-size: 1.5rem;
-      margin: 1rem 0;
-      color: #fff;
-    }
-    .buy-btn {
-      background: #d4af37;
-      color: #0c0c0c;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 3px;
-      text-decoration: none;
-      display: inline-block;
-      margin-bottom: 0.5rem;
-    }
-    .buy-btn:hover {
-      background: #f7ce58;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      padding: 3rem 1rem;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-      background-color: rgba(0, 0, 0, 0.95);
-    }
-    .modal-conteudo {
-      max-width: 960px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .modal-conteudo img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #000;
-    }
-    .horoscopo {
-      width: 100%;
-      text-align: center;
-      color: #ccc;
-      margin-top: 2rem;
-      font-size: 1rem;
-      white-space: pre-wrap;
-    }
-    .fechar {
-      position: fixed;
-      top: 1rem;
-      right: 2rem;
-      color: #fff;
-      font-size: 2rem;
-      cursor: pointer;
-      z-index: 10000;
-    }
-    .share-btn {
-      background: transparent;
-      color: #aaa;
-      border: 1px solid #777;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.9rem;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    .share-btn:hover {
-      background: #333;
-    }
-    .contact {
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .contact a {
-      color: #d4af37;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    @media screen and (max-width: 768px) {
-      h1 { font-size: 1.5rem; }
-      .quadro-card {
-        width: 90%;
-      }
-    }
-  </style>
+  
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="particles-js"></div>
+
   <header data-aos="fade-down">
-    <img src="logo.png" alt="Logo da marca VERBA — Arte exclusiva para signos" class="logo" loading="lazy">
+    <img src="logo.png" alt="Logo da marca VERBA" class="logo" loading="lazy" />
     <p class="subtitle">Verbum, Expressio, Vox</p>
   </header>
 
   <h1 data-aos="fade-up">Quadros Decorativos de Signos em Estilo Bauhaus</h1>
 
   <main class="vitrine" id="vitrine">
-    
     <div class="quadro-card" data-aos="fade-up">
-      <img src="Aries.png" class="quadro-thumb" alt="Quadro decorativo do signo de Áries em estilo Bauhaus" onclick="abrirGaleria('aries')">
+      <img src="Aries.png" class="quadro-thumb" alt="Quadro Áries" onclick="abrirGaleria('aries')">
       <h2>Quadro Áries</h2>
       <p class="price">R$ 329,99</p>
       <a class="buy-btn" href="https://produto.mercadolivre.com.br/MLB-4653636097" target="_blank">Comprar</a>
     </div>
-    
     <div class="quadro-card" data-aos="fade-up">
-      <img src="Peixes.png" class="quadro-thumb" alt="Quadro decorativo do signo de Peixes em estilo Bauhaus" onclick="abrirGaleria('peixes')">
+      <img src="Peixes.png" class="quadro-thumb" alt="Quadro Peixes" onclick="abrirGaleria('peixes')">
       <h2>Quadro Peixes</h2>
       <p class="price">R$ 329,99</p>
       <a class="buy-btn" href="https://wa.me/5511993957268?text=Olá%2C%20quero%20comprar%20o%20quadro%20Peixes" target="_blank">Comprar</a>
     </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-touro.png" class="quadro-thumb" alt="Quadro decorativo do signo de Touro - Em Breve" onclick="abrirGaleria('touro')">
-      <h2>Quadro Touro</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-gemeos.png" class="quadro-thumb" alt="Quadro decorativo do signo de Gêmeos - Em Breve" onclick="abrirGaleria('gemeos')">
-      <h2>Quadro Gêmeos</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-    
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-cancer.png" class="quadro-thumb" alt="Quadro decorativo do signo de Câncer - Em Breve" onclick="abrirGaleria('cancer')">
-      <h2>Quadro Câncer</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-leao.png" class="quadro-thumb" alt="Quadro decorativo do signo de Leão - Em Breve" onclick="abrirGaleria('leao')">
-      <h2>Quadro Leão</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-virgem.png" class="quadro-thumb" alt="Quadro decorativo do signo de Virgem - Em Breve" onclick="abrirGaleria('virgem')">
-      <h2>Quadro Virgem</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-libra.png" class="quadro-thumb" alt="Quadro decorativo do signo de Libra - Em Breve" onclick="abrirGaleria('libra')">
-      <h2>Quadro Libra</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-escorpiao.png" class="quadro-thumb" alt="Quadro decorativo do signo de Escorpião - Em Breve" onclick="abrirGaleria('escorpiao')">
-      <h2>Quadro Escorpião</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-sagitario.png" class="quadro-thumb" alt="Quadro decorativo do signo de Sagitário - Em Breve" onclick="abrirGaleria('sagitario')">
-      <h2>Quadro Sagitário</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-capricornio.png" class="quadro-thumb" alt="Quadro decorativo do signo de Capricórnio - Em Breve" onclick="abrirGaleria('capricornio')">
-      <h2>Quadro Capricórnio</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-    <div class="quadro-card" data-aos="fade-up">
-      <img src="placeholder-aquario.png" class="quadro-thumb" alt="Quadro decorativo do signo de Aquário - Em Breve" onclick="abrirGaleria('aquario')">
-      <h2>Quadro Aquário</h2>
-      <p class="price">Em breve</p>
-      <a class="buy-btn" href="https://wa.me/5511993957268" target="_blank">Fale no WhatsApp</a>
-    </div>
-
-  </main>
+    </main>
 
   <div id="galeria-modal" class="modal">
-    <span class="fechar" onclick="fecharGaleria()">&times;</span>
+    <span class="fechar" onclick="fecharGaleria()" role="button" aria-label="Fechar modal">&times;</span>
     <div class="modal-conteudo" id="galeria-conteudo"></div>
     <div class="horoscopo" id="horoscopo">Carregando horóscopo...</div>
     <div style="text-align:center">
@@ -349,81 +60,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
- <script>
-  AOS.init();
-  particlesJS('particles-js', {
-    particles: {
-      number: { value: 60 },
-      size: { value: 3 },
-      color: { value: "#ffffff" },
-      line_linked: {
-        enable: true,
-        opacity: 0.2,
-        color: "#ffffff"
-      },
-      move: { speed: 1 }
-    },
-    interactivity: {
-      events: {
-        onhover: { enable: true, mode: "repulse" }
-      }
-    }
-  });
-
-  const signos = [
-    { nome: 'aries', pronto: true, preco: 'R$ 329,99', img: 'Aries.png', galeria: ['Aries.png', 'salaAries1.png', 'salaAries2.png'], link: 'https://produto.mercadolivre.com.br/MLB-4653636097' },
-    { nome: 'peixes', pronto: true, preco: 'R$ 329,99', img: 'Peixes.png', galeria: ['Peixes.png', 'salaPeixes1.png', 'salaPeixes2.png'], link: 'https://wa.me/5511993957268?text=Olá%2C%20quero%20comprar%20o%20quadro%20Peixes' },
-    { nome: 'touro', pronto: false, galeria: ['placeholder-touro.png'] },
-    { nome: 'gemeos', pronto: false, galeria: ['placeholder-gemeos.png'] },
-    { nome: 'cancer', pronto: false, galeria: ['placeholder-cancer.png'] },
-    { nome: 'leao', pronto: false, galeria: ['placeholder-leao.png'] },
-    { nome: 'virgem', pronto: false, galeria: ['placeholder-virgem.png'] },
-    { nome: 'libra', pronto: false, galeria: ['placeholder-libra.png'] },
-    { nome: 'escorpiao', pronto: false, galeria: ['placeholder-escorpiao.png'] },
-    { nome: 'sagitario', pronto: false, galeria: ['placeholder-sagitario.png'] },
-    { nome: 'capricornio', pronto: false, galeria: ['placeholder-capricornio.png'] },
-    { nome: 'aquario', pronto: false, galeria: ['placeholder-aquario.png'] }
-  ];
-
-  function abrirGaleria(signoNome) {
-    const dados = signos.find(s => s.nome === signoNome);
-    if (!dados) return;
-
-    const galeria = document.getElementById('galeria-conteudo');
-    const horoscopo = document.getElementById('horoscopo');
-    galeria.innerHTML = '';
-    horoscopo.innerText = 'Carregando horóscopo...';
-
-    dados.galeria.forEach(img => {
-      const tag = document.createElement('img');
-      tag.src = img;
-      tag.alt = `Imagem do quadro de ${signoNome}`;
-      galeria.appendChild(tag);
-    });
-
-    fetch(`https://aztro.sameerkumar.website/?sign=${signoNome}&day=today`, {
-      method: 'POST'
-    })
-      .then(res => res.json())
-      .then(data => {
-        horoscopo.innerText = `Horóscopo de hoje para ${signoNome.toUpperCase()}:\n` + data.description;
-      })
-      .catch(() => {
-        horoscopo.innerText = "Não foi possível carregar o horóscopo.";
-      });
-
-    document.getElementById('galeria-modal').style.display = 'block';
-  }
-
-  function fecharGaleria() {
-    document.getElementById('galeria-modal').style.display = 'none';
-  }
-
-  window.onclick = function (event) {
-    const modal = document.getElementById('galeria-modal');
-    if (event.target === modal) fecharGaleria();
-  }
-</script>
-
+  
+  <script src="script.js" defer></script>
 </body>
 </html>
