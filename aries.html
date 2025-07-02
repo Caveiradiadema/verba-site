@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quadro Áries — Estilo Bauhaus | VERBA</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Quadro decorativo do signo de Áries em estilo Bauhaus. Envio rápido e seguro.">
+  <meta name="keywords" content="quadro áries, arte bauhaus áries, presente signo áries, decoração astrologia">
+  <link rel="canonical" href="https://caveiradiadema.github.io/verba-site/aries.html">
+  <meta property="og:type"        content="product">
+  <meta property="og:url"         content="https://caveiradiadema.github.io/verba-site/aries.html">
+  <meta property="og:title"       content="Quadro Áries — VERBA">
+  <meta property="og:description" content="Arte exclusiva inspirada em Áries, no icônico estilo Bauhaus.">
+  <meta property="og:image"       content="https://caveiradiadema.github.io/verba-site/Aries.png">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Quadro Áries 40×50 cm — VERBA",
+    "image":"https://caveiradiadema.github.io/verba-site/Aries.png",
+    "description":"Arte em estilo Bauhaus representando o signo de Áries.",
+    "brand":{"@type":"Brand","name":"VERBA"},
+    "offers":{
+      "@type":"Offer",
+      "url":"https://produto.mercadolivre.com.br/MLB-5459201494",
+      "price":"329.90",
+      "priceCurrency":"BRL",
+      "availability":"https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- Estilos e libs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ajustes rápidos só desta página */
+    .galeria {display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+    .thumbs {display:flex;flex-direction:column;gap:.5rem;}
+    .thumbs img{width:70px;height:70px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid transparent;transition:.2s}
+    .thumbs img:hover{border-color:#d4af37}
+    #img-principal{max-width:350px;border-radius:6px;box-shadow:0 0 20px rgba(0,0,0,.6)}
+    .btn-nav{margin:.8rem .4rem;padding:.6rem 1.2rem;border-radius:4px;border:none;cursor:pointer;font-weight:600}
+    .btn-home{background:#333;color:#f5f5f5}
+    .btn-next{background:#d4af37;color:#0c0c0c}
+    .btn-home:hover{background:#444}
+    .btn-next:hover{background:#f7ce58}
+    .produto-info{text-align:center;margin-top:1rem}
+    #horoscopo{max-width:700px;margin:2rem auto 4rem;text-align:center;white-space:pre-wrap;color:#ccc}
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header data-aos="fade-down">
+    <img src="logo.png" class="logo" alt="Logo VERBA" width="140" height="140" loading="lazy">
+    <p class="subtitle">Verbum · Expressio · Vox</p>
+  </header>
+
+  <main class="produto" data-aos="fade-up">
+    <h1>Quadro Áries</h1>
+
+    <!-- Galeria -->
+    <div class="galeria">
+      <div class="thumbs">
+        <img src="Aries.png"         alt="Miniatura 1" onclick="trocarImagem('Aries.png')">
+        <img src="salaAries1.png"    alt="Miniatura 2" onclick="trocarImagem('salaAries1.png')">
+        <img src="salaAries2.png"    alt="Miniatura 3" onclick="trocarImagem('salaAries2.png')">
+      </div>
+      <img id="img-principal" src="Aries.png" alt="Quadro Áries em detalhe">
+    </div>
+
+    <div class="produto-info">
+      <p class="price">R$ 329,99</p>
+      <a class="buy-btn" href="https://produto.mercadolivre.com.br/MLB-5459201494" target="_blank" rel="noopener">Comprar no Mercado Livre</a><br>
+      <button class="btn-nav btn-home" onclick="location.href='index.html'">← Voltar à Home</button>
+      <button class="btn-nav btn-next" onclick="location.href='peixes.html'">Próximo signo →</button>
+    </div>
+  </main>
+
+  <!-- Horóscopo -->
+  <section id="horoscopo" data-aos="fade-up">Carregando horóscopo...</section>
+
+  <footer data-aos="fade-up">
+    © 2025 VERBA — Todos os direitos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    AOS.init();
+    particlesJS('particles-js',{
+      particles:{number:{value:60},size:{value:3},color:{value:'#ffffff'},
+      line_linked:{enable:true,opacity:0.2,color:'#ffffff'},move:{speed:1}},
+      interactivity:{events:{onhover:{enable:true,mode:'repulse'}}}
+    });
+
+    /* troca da imagem principal */
+    function trocarImagem(src){
+      document.getElementById('img-principal').src = src;
+    }
+
+    /* busca + tradução do horóscopo */
+    (async()=>{
+      try{
+        const url = 'https://api.allorigins.win/raw?url='+
+          encodeURIComponent('https://ohmanda.com/api/horoscope/aries');
+        const resp = await fetch(url);
+        const data = await resp.json();
+        const original = data.horoscope||'';
+
+        const traduz = await fetch(
+          'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q='+encodeURIComponent(original)
+        ).then(r=>r.json());
+
+        const pt = traduz[0].map(t=>t[0]).join('');
+        document.getElementById('horoscopo').textContent =
+          'Horóscopo de hoje – Áries:\n\n'+pt;
+      }catch(e){
+        console.error(e);
+        document.getElementById('horoscopo').textContent =
+          'Não foi possível carregar o horóscopo agora.';
+      }
+    })();
+  </script>
+</body>
+</html>

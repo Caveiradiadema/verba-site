@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quadro Signo de Libra | VERBA — Arte Bauhaus</title>
+  <meta name="description"
+        content="Pré-via do quadro decorativo do signo de Libra em estilo Bauhaus. Avise-me quando estiver disponível!" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="icon.png" type="image/png" />
+
+  <!-- fontes + CSS global -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ajustes pontuais desta página -->
+  <style>
+    .prod-wrapper   { max-width:960px; margin:2rem auto 0; display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; }
+    .thumbs         { display:flex; flex-direction:column; gap:.7rem; flex:0 0 72px; }
+    .thumbs img     { width:70px; height:70px; object-fit:cover; border-radius:4px; cursor:pointer; box-shadow:0 0 7px rgba(0,0,0,.6); }
+    .main-img       { width:min(90vw,420px); border-radius:6px; box-shadow:0 0 12px rgba(0,0,0,.7); }
+    .produto-info   { text-align:center; margin:1.8rem 0; }
+    .price.em-breve { font-size:1.8rem; font-weight:700; margin-bottom:1rem; }
+    .nav-buttons    { display:flex; gap:.7rem; justify-content:center; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .btn-nav        { padding:.6rem 1.4rem; font:600 .9rem/1 'Raleway',sans-serif; border:none; border-radius:4px; cursor:pointer; }
+    .btn-prev       { background:#d4af37; color:#0c0c0c; }
+    .btn-home       { background:#222;   color:#fff;   }
+    .btn-next       { background:#fff;   color:#0c0c0c; border:1px solid #333; }
+    #horoscopo      { max-width:680px; margin:0 auto 3rem; white-space:pre-wrap; text-align:center; font-size:1rem; color:#ccc; }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- topo -->
+  <header>
+    <img src="logo.png" alt="Logo VERBA" class="logo" loading="lazy">
+  </header>
+
+  <h1>Quadro • Signo de Libra • Estilo Bauhaus</h1>
+
+  <!-- galeria -->
+  <section class="prod-wrapper">
+    <div class="thumbs">
+      <img src="placeholder-libra.png" alt="Pré-via quadro Libra" onclick="trocarImg(this)">
+    </div>
+
+    <img id="main-img" class="main-img" src="placeholder-libra.png" alt="Quadro Libra em breve">
+  </section>
+
+  <!-- CTA -->
+  <section class="produto-info">
+    <p class="price em-breve">Em breve</p>
+    <a class="buy-btn"
+       href="https://wa.me/5511993957268?text=Ol%C3%A1%2C%20quero%20ser%20avisado%20quando%20o%20quadro%20Libra%20estiver%20dispon%C3%ADvel%21"
+       target="_blank" rel="noopener">
+      Avisar-me no WhatsApp
+    </a>
+  </section>
+
+  <!-- navegação -->
+  <nav class="nav-buttons">
+    <button class="btn-nav btn-prev" onclick="location.href='virgem.html'">← Signo&nbsp;anterior</button>
+    <button class="btn-nav btn-home" onclick="location.href='index.html'">Voltar&nbsp;à&nbsp;Home</button>
+    <button class="btn-nav btn-next" onclick="location.href='escorpiao.html'">Próximo&nbsp;signo&nbsp;→</button>
+  </nav>
+
+  <!-- horóscopo -->
+  <section id="horoscopo">Carregando horóscopo…</section>
+
+  <footer>© 2025 VERBA — Todos os direitos reservados.</footer>
+
+  <!-- libs -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script>
+    /* partículas + AOS */
+    AOS.init();
+    particlesJS('particles-js', {
+      particles:{number:{value:60}, size:{value:3}, color:{value:'#ffffff'},
+                 line_linked:{enable:true, opacity:0.2, color:'#ffffff'}, move:{speed:1}},
+      interactivity:{events:{onhover:{enable:true, mode:'repulse'}}}
+    });
+
+    /* troca da miniatura */
+    const trocarImg = el => document.getElementById('main-img').src = el.src;
+
+    /* horóscopo traduzido */
+    (async () => {
+      const out = document.getElementById('horoscopo');
+      try {
+        const proxy = 'https://api.allorigins.win/raw?url=' +
+                      encodeURIComponent('https://ohmanda.com/api/horoscope/libra');
+        const data  = await (await fetch(proxy)).json();
+        const enTxt = data.horoscope || '';
+        const trApi = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q=' +
+                      encodeURIComponent(enTxt);
+        const trArr = await (await fetch(trApi)).json();
+        const ptTxt = trArr[0].map(t => t[0]).join('');
+        out.textContent = 'Horóscopo de hoje para LIBRA:\n\n' + ptTxt;
+      } catch (e) {
+        console.error(e);
+        out.textContent = 'Não foi possível carregar o horóscopo no momento.';
+      }
+    })();
+  </script>
+</body>
+</html>
