@@ -1,110 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Quadro Peixes — Estilo Bauhaus | VERBA</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <meta name="description" content="Quadro decorativo do signo de Peixes em estilo Bauhaus. Perfeito para presentear ou decorar.">
-  <meta name="keywords" content="quadro peixes, arte bauhaus peixes, presente signo peixes, decoração astrologia">
-  <link rel="canonical" href="https://caveiradiadema.github.io/verba-site/peixes.html">
-  <meta property="og:type"        content="product">
-  <meta property="og:url"         content="https://caveiradiadema.github.io/verba-site/peixes.html">
-  <meta property="og:title"       content="Quadro Peixes — VERBA">
-  <meta property="og:description" content="Arte exclusiva inspirada em Peixes, no icônico estilo Bauhaus.">
-  <meta property="og:image"       content="https://caveiradiadema.github.io/verba-site/Peixes.png">
-  <meta name="twitter:card"       content="summary_large_image">
+  <title>Quadro Signo de Peixes | VERBA — Arte Bauhaus</title>
+  <meta name="description" content="Quadro decorativo do signo de Peixes em estilo Bauhaus. Veja fotos ambientadas e o horóscopo de hoje traduzido." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="icon.png" type="image/png" />
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Quadro Peixes 40×50 cm — VERBA",
-    "image":"https://caveiradiadema.github.io/verba-site/Peixes.png",
-    "description":"Arte em estilo Bauhaus representando o signo de Peixes.",
-    "brand":{"@type":"Brand","name":"VERBA"},
-    "offers":{
-      "@type":"Offer",
-      "url":"https://produto.mercadolivre.com.br/MLB-5460314820",
-      "price":"329.90",
-      "priceCurrency":"BRL",
-      "availability":"https://schema.org/InStock"
-    }
-  }
-  </script>
-
-  <!-- Estilos e libs -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- fontes + css global -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ajustes pontuais da página de produto -->
   <style>
-    .galeria{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
-    .thumbs{display:flex;flex-direction:column;gap:.5rem}
-    .thumbs img{width:70px;height:70px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid transparent;transition:.2s}
-    .thumbs img:hover{border-color:#d4af37}
-    #img-principal{max-width:350px;border-radius:6px;box-shadow:0 0 20px rgba(0,0,0,.6)}
-    .btn-nav{margin:.8rem .4rem;padding:.6rem 1.2rem;border-radius:4px;border:none;cursor:pointer;font-weight:600}
-    .btn-home{background:#333;color:#f5f5f5}.btn-home:hover{background:#444}
-    .btn-prev{background:#d4af37;color:#0c0c0c}.btn-prev:hover{background:#f7ce58}
-    .produto-info{text-align:center;margin-top:1rem}
-    #horoscopo{max-width:700px;margin:2rem auto 4rem;text-align:center;white-space:pre-wrap;color:#ccc}
+    .prod-wrapper { max-width:960px; margin:2rem auto 0; display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center; }
+    .thumbs       { display:flex; flex-direction:column; gap:.7rem; flex:0 0 72px; }
+    .thumbs img   { width:70px; height:70px; object-fit:cover; border-radius:4px; cursor:pointer; box-shadow:0 0 7px rgba(0,0,0,.6); }
+    .main-img     { width:min(90vw,420px); border-radius:6px; box-shadow:0 0 12px rgba(0,0,0,.7); }
+    .produto-info { text-align:center; margin:1.8rem 0; }
+    .nav-buttons  { display:flex; gap:.7rem; justify-content:center; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .btn-nav      { padding:.6rem 1.4rem; font:600 .9rem/1 'Raleway',sans-serif; border:none; border-radius:4px; cursor:pointer; }
+    .btn-prev{background:#d4af37;color:#0c0c0c}.btn-home{background:#222;color:#fff}.btn-next{background:#fff;color:#0c0c0c;border:1px solid #333}
+    .horoscopo   { max-width:680px; margin:0 auto 3rem; white-space:pre-wrap; text-align:center; font-size:1rem; color:#ccc;}
   </style>
 </head>
 <body>
   <div id="particles-js"></div>
 
-  <header data-aos="fade-down">
-    <img src="logo.png" class="logo" alt="Logo VERBA" width="140" height="140" loading="lazy">
-    <p class="subtitle">Verbum · Expressio · Vox</p>
+  <header>
+    <img src="logo.png" alt="Logo VERBA" class="logo" loading="lazy">
   </header>
 
-  <main class="produto" data-aos="fade-up">
-    <h1>Quadro Peixes</h1>
+  <h1>Quadro • Signo de Peixes • Estilo Bauhaus</h1>
 
-    <!-- Galeria -->
-    <div class="galeria">
-      <div class="thumbs">
-        <img src="Peixes.png"      alt="Miniatura 1" onclick="trocarImagem('Peixes.png')">
-        <img src="salaPeixes1.png" alt="Miniatura 2" onclick="trocarImagem('salaPeixes1.png')">
-        <img src="salaPeixes2.png" alt="Miniatura 3" onclick="trocarImagem('salaPeixes2.png')">
-      </div>
-      <img id="img-principal" src="Peixes.png" alt="Quadro Peixes em detalhe">
+  <!-- galeria -->
+  <section class="prod-wrapper">
+    <div class="thumbs">
+      <img src="Peixes.png"          alt="Quadro Peixes"           onclick="trocarImg(this)">
+      <img src="salaPeixes1.png"     alt="Quadro Peixes na sala"   onclick="trocarImg(this)">
+      <img src="salaPeixes2.png"     alt="Quadro Peixes decorado"  onclick="trocarImg(this)">
     </div>
+    <img id="main-img" class="main-img" src="Peixes.png" alt="Quadro Peixes em estilo Bauhaus">
+  </section>
 
-    <!-- …cabeçalho permanece igual… -->
+  <!-- preço / CTA -->
+  <section class="produto-info">
+    <p class="price">R$ 329,99</p>
+    <a class="buy-btn"
+       href="https://produto.mercadolivre.com.br/MLB-5460314820"
+       target="_blank" rel="noopener">
+       Comprar no Mercado Livre
+    </a>
+  </section>
 
-<div class="produto-info">
-  <p class="price">R$ 329,99</p>
-  <a class="buy-btn" href="https://produto.mercadolivre.com.br/MLB-5460314820" target="_blank" rel="noopener">
-    Comprar no Mercado Livre
-  </a><br>
+  <!-- navegação -->
+  <nav class="nav-buttons">
+    <button class="btn-nav btn-prev" onclick="location.href='aries.html'">← Signo anterior</button>
+    <button class="btn-nav btn-home" onclick="location.href='index.html'">Voltar à Home</button>
+    <button class="btn-nav btn-next" onclick="location.href='touro.html'">Próximo signo →</button>
+  </nav>
 
-  <!-- Navegação entre signos 👇 -->
-  <button class="btn-nav btn-prev" onclick="location.href='aries.html'">
-    ← Signo anterior
-  </button>
-  <button class="btn-nav btn-home" onclick="location.href='index.html'">
-    ← Voltar à Home
-  </button>
-  <button class="btn-nav btn-next" onclick="location.href='touro.html'">
-    Próximo signo →
-  </button>
-</div>
+  <!-- horóscopo -->
+  <pre id="horoscopo" class="horoscopo">Carregando horóscopo…</pre>
 
-  </main>
+  <footer>© 2025 VERBA — Todos os direitos reservados.</footer>
 
-  <!-- Horóscopo -->
-  <section id="horoscopo" data-aos="fade-up">Carregando horóscopo...</section>
-
-  <footer data-aos="fade-up">
-    © 2025 VERBA — Todos os direitos reservados.
-  </footer>
-
-  <!-- Scripts -->
+  <!-- libs -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
@@ -115,26 +78,32 @@
       interactivity:{events:{onhover:{enable:true,mode:'repulse'}}}
     });
 
-    function trocarImagem(src){ document.getElementById('img-principal').src = src; }
+    /* troca da miniatura */
+    const trocarImg = el => document.getElementById('main-img').src = el.src;
 
-    (async()=>{
-      try{
-        const url = 'https://api.allorigins.win/raw?url='+encodeURIComponent('https://ohmanda.com/api/horoscope/pisces');
-        const resp = await fetch(url);
-        const data = await resp.json();
-        const original = data.horoscope||'';
+    /* horóscopo com fallback */
+    (async () => {
+      const out = document.getElementById('horoscopo');
+      try {
+        const proxy = 'https://api.allorigins.win/raw?url=' +
+                      encodeURIComponent('https://ohmanda.com/api/horoscope/pisces');
+        const enRes = await fetch(proxy);
+        if (!enRes.ok) throw new Error('Proxy off-line');
+        const { horoscope: enTxt = '' } = await enRes.json();
 
-        const traducao = await fetch(
-          'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q='+encodeURIComponent(original)
-        ).then(r=>r.json());
+        let ptTxt = enTxt;
+        try {
+          const tr = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q=' +
+                                 encodeURIComponent(enTxt)).then(r => r.json());
+          if (Array.isArray(tr) && Array.isArray(tr[0])) {
+            ptTxt = tr[0].map(t => t[0]).join('');
+          }
+        } catch {/* mantém inglês se traduzir falhar */ }
 
-        const textoPT = traducao[0].map(t=>t[0]).join('');
-        document.getElementById('horoscopo').textContent =
-          'Horóscopo de hoje – Peixes:\n\n'+textoPT;
-      }catch(e){
+        out.textContent = 'Horóscopo de hoje – PEIXES:\n\n' + ptTxt;
+      } catch(e){
         console.error(e);
-        document.getElementById('horoscopo').textContent =
-          'Não foi possível carregar o horóscopo agora.';
+        out.textContent = 'Não foi possível carregar o horóscopo agora.';
       }
     })();
   </script>
