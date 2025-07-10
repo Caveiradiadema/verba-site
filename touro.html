@@ -4,26 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Quadro Signo de Touro | VERBA — Arte Bauhaus</title>
-  <meta name="description" content="Pré-via do quadro decorativo do signo de Touro em estilo Bauhaus. Avise-me quando estiver disponível!" />
+  <title>Quadro Signo de Touro | VERBA — Art Nouveau</title>
+  <meta name="description" content="Quadro decorativo do signo de Touro em estilo Art Nouveau. Veja fotos ambientadas e o horóscopo de hoje traduzido." />
   <meta name="robots" content="index,follow" />
   <link rel="icon" href="icon.png" type="image/png" />
 
-  <!-- fonte + css global -->
+  <!-- fontes + css global -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
+  <!-- ajustes pontuais -->
   <style>
-    .prod-wrapper{max-width:960px;margin:2rem auto 0;display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;}
-    .thumbs{display:flex;flex-direction:column;gap:.7rem;flex:0 0 72px;}
-    .thumbs img{width:70px;height:70px;object-fit:cover;border-radius:4px;cursor:pointer;box-shadow:0 0 7px rgba(0,0,0,.6);}
-    .main-img{width:min(90vw,420px);border-radius:6px;box-shadow:0 0 12px rgba(0,0,0,.7);}
-    .produto-info{text-align:center;margin:1.8rem 0;}
-    .price.em-breve{font-size:1.8rem;font-weight:700;margin-bottom:1rem;}
-    .nav-buttons{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;}
-    .btn-nav{padding:.6rem 1.4rem;font:600 .9rem/1 'Raleway',sans-serif;border:none;border-radius:4px;cursor:pointer;}
+    .prod-wrapper{max-width:960px;margin:2rem auto 0;display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+    .thumbs{display:flex;flex-direction:column;gap:.7rem;flex:0 0 72px}
+    .thumbs img{width:70px;height:70px;object-fit:cover;border-radius:4px;cursor:pointer;box-shadow:0 0 7px rgba(0,0,0,.6)}
+    .main-img{width:min(90vw,420px);border-radius:6px;box-shadow:0 0 12px rgba(0,0,0,.7)}
+    .produto-info{text-align:center;margin:1.8rem 0}
+    .nav-buttons{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
+    .btn-nav{padding:.6rem 1.4rem;font:600 .9rem/1 'Raleway',sans-serif;border:none;border-radius:4px;cursor:pointer}
     .btn-prev{background:#d4af37;color:#0c0c0c}.btn-home{background:#222;color:#fff}.btn-next{background:#fff;color:#0c0c0c;border:1px solid #333}
-    .horoscopo{max-width:680px;margin:0 auto 3rem;white-space:pre-wrap;text-align:center;font-size:1rem;color:#ccc;}
+    .horoscopo{max-width:680px;margin:0 auto 3rem;white-space:pre-wrap;text-align:center;font-size:1rem;color:#ccc}
   </style>
 </head>
 <body>
@@ -33,34 +33,40 @@
     <img src="logo.png" alt="Logo VERBA" class="logo" loading="lazy">
   </header>
 
-  <h1>Quadro • Signo de Touro • Estilo Bauhaus</h1>
+  <h1>Quadro • Signo de Touro • Estilo Art Nouveau</h1>
 
+  <!-- galeria -->
   <section class="prod-wrapper">
     <div class="thumbs">
-      <img src="placeholder-touro.png" alt="Preview quadro Touro" onclick="trocarImg(this)">
+      <img src="touro.png"        alt="Quadro Touro — Art Nouveau"      onclick="trocarImg(this)">
+      <img src="tourosala1.png"   alt="Quadro Touro ambientado 1"        onclick="trocarImg(this)">
+      <img src="tourosala2.png"   alt="Quadro Touro ambientado 2"        onclick="trocarImg(this)">
     </div>
-    <img id="main-img" class="main-img" src="placeholder-touro.png" alt="Quadro Touro em breve">
+    <img id="main-img" class="main-img" src="touro.png" alt="Quadro Touro em Art Nouveau">
   </section>
 
+  <!-- preço / CTA -->
   <section class="produto-info">
-    <p class="price em-breve">Em breve</p>
+    <p class="price">R$ 329,99</p>
+    <!-- coloque o link real quando tiver; por ora deixei “Avise-me” -->
     <a class="buy-btn"
-       href="https://wa.me/5511993957268?text=Ol%C3%A1,%20quero%20ser%20avisado%20quando%20o%20quadro%20Touro%20estiver%20dispon%C3%ADvel!"
-       target="_blank" rel="noopener">
-       Avisar-me no WhatsApp
-    </a>
+       href="https://wa.me/5511993957268?text=Ol%C3%A1,%20quero%20comprar%20o%20quadro%20Touro!"
+       target="_blank" rel="noopener">Comprar / Avise-me</a>
   </section>
 
+  <!-- navegação -->
   <nav class="nav-buttons">
     <button class="btn-nav btn-prev" onclick="location.href='peixes.html'">← Signo anterior</button>
     <button class="btn-nav btn-home" onclick="location.href='index.html'">Voltar à Home</button>
     <button class="btn-nav btn-next" onclick="location.href='gemeos.html'">Próximo signo →</button>
   </nav>
 
+  <!-- horóscopo -->
   <pre id="horoscopo" class="horoscopo">Carregando horóscopo…</pre>
 
   <footer>© 2025 VERBA — Todos os direitos reservados.</footer>
 
+  <!-- libs -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
@@ -71,27 +77,31 @@
       interactivity:{events:{onhover:{enable:true,mode:'repulse'}}}
     });
 
+    /* galeria */
     const trocarImg = el => document.getElementById('main-img').src = el.src;
 
+    /* horóscopo com fallback */
     (async () => {
       const out = document.getElementById('horoscopo');
       try{
-        const proxy = 'https://api.allorigins.win/raw?url=' +
-                      encodeURIComponent('https://ohmanda.com/api/horoscope/taurus');
-        const enRes = await fetch(proxy);
-        if(!enRes.ok) throw new Error('Proxy off-line');
+        const viaProxy = 'https://api.allorigins.win/raw?url=' +
+                         encodeURIComponent('https://ohmanda.com/api/horoscope/taurus');
+        const enRes = await fetch(viaProxy);
+        if(!enRes.ok) throw new Error('proxy down');
         const { horoscope: enTxt = '' } = await enRes.json();
 
-        let ptTxt = enTxt;
+        let ptTxt = enTxt; // fallback inglês
         try{
-          const tr = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q='+
-                                 encodeURIComponent(enTxt)).then(r=>r.json());
-          if(Array.isArray(tr) && Array.isArray(tr[0])){
-            ptTxt = tr[0].map(t=>t[0]).join('');
+          const tr = await fetch(
+            'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q=' +
+            encodeURIComponent(enTxt)
+          ).then(r => r.json());
+          if(Array.isArray(tr) && Array.isArray(tr[0])) {
+            ptTxt = tr[0].map(t => t[0]).join('');
           }
-        }catch{/* usa inglês se tradução falhar */}
+        }catch{/* mantém inglês se falhar */ }
 
-        out.textContent = 'Horóscopo de hoje – TOURO:\n\n'+ptTxt;
+        out.textContent = 'Horóscopo de hoje — TOURO:\n\n' + ptTxt;
       }catch(e){
         console.error(e);
         out.textContent = 'Não foi possível carregar o horóscopo agora.';
