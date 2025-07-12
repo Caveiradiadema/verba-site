@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quadros Decorativos • Coleção Signos | VERBA</title>
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://caveiradiadema.github.io/verba-site/" />
+  <meta name="description" content="Quadros exclusivos dos 12 signos em vários estilos de arte. Clique em um quadro para ver fotos, detalhes e comprar." />
+  <meta name="robots"      content="index,follow" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://caveiradiadema.github.io/verba-site/" />
+  <meta property="og:title"       content="Coleção Signos • Quadros Decorativos VERBA" />
+  <meta property="og:description" content="Descubra quadros originais para cada signo — de Bauhaus a Surrealismo." />
+  <meta property="og:image"       content="https://caveiradiadema.github.io/verba-site/og-logo.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- Ads / fontes / libs -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6341691198145403" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header data-aos="fade-down">
+    <img src="logo.png" alt="Logo VERBA" class="logo" width="140" height="140" loading="lazy" />
+    <p class="subtitle">Verbum · Expressio · Vox</p>
+  </header>
+
+  <h1 data-aos="fade-up">Coleção Signos — Quadros Decorativos</h1>
+  <p style="text-align:center;margin-top:-.5rem;margin-bottom:1.5rem;font-size:.95rem;color:#ccc">
+    <strong>Dica:</strong> clique no quadro para ver mais fotos e detalhes
+  </p>
+
+  <!-- bloco de anúncio responsivo -->
+  <ins class="adsbygoogle"
+       style="display:block;margin:1.5rem auto;max-width:970px"
+       data-ad-client="ca-pub-6341691198145403"
+       data-ad-slot="7913516518"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <main id="vitrine" class="vitrine"><!-- JS insere cards aqui --></main>
+
+  <section class="contact" data-aos="fade-up">
+    <p>Quer algo sob medida?</p>
+    <a href="https://wa.me/5511993957268?text=Ol%C3%A1,%20quero%20uma%20arte%20personalizada%20da%20VERBA!"
+       target="_blank" rel="noopener">Fale com a artista</a>
+  </section>
+
+  <footer data-aos="fade-up">© 2025 VERBA — Todos os direitos reservados.</footer>
+
+  <!-- libs -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <!-- modal (galeria + horóscopo) -->
+  <div id="galeria-modal" class="modal">
+    <span class="fechar" onclick="fecharGaleria()" role="button" aria-label="Fechar modal">&times;</span>
+    <div id="galeria-conteudo" class="modal-conteudo"></div>
+    <pre id="horoscopo" class="horoscopo"></pre>
+    <button class="share-btn" onclick="navigator.clipboard.writeText(location.href);alert('Link copiado!')">Compartilhar</button>
+  </div>
+</body>
+</html>

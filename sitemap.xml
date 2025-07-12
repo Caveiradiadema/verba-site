@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home -->
+  <url>
+    <loc>https://caveiradiadema.github.io/verba-site/</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Páginas já publicadas -->
+  <url><loc>https://caveiradiadema.github.io/verba-site/aries.html</loc><lastmod>2025-07-02</lastmod><priority>0.8</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/peixes.html</loc><lastmod>2025-07-02</lastmod><priority>0.8</priority></url>
+
+  <!-- “Em breve” (ainda assim envie para o Google) -->
+  <url><loc>https://caveiradiadema.github.io/verba-site/touro.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/gemeos.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/cancer.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/leao.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/virgem.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/libra.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/escorpiao.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/sagitario.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/capricornio.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+  <url><loc>https://caveiradiadema.github.io/verba-site/aquario.html</loc><lastmod>2025-07-02</lastmod><priority>0.6</priority></url>
+</urlset>
