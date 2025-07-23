@@ -13,15 +13,15 @@ particlesJS('particles-js', {
 
 /* ---------- dados ---------- */
 const signos = [
-{
+  {
     nome: 'peixes',
     titulo: 'Peixes',
     img: 'Peixes.png',
     galeria: ['Peixes.png', 'salaPeixes1.png', 'salaPeixes2.png'],
     comprar: 'https://produto.mercadolivre.com.br/MLB-5492866158-quadro-peixes-40x50-cm-arte-exclusiva-estilo-impressionismo-_JM',
     ml: true
-  },  
-{
+  },
+  {
     nome: 'aries',
     titulo: 'Áries',
     img: 'Aries.png',
@@ -109,7 +109,6 @@ const signos = [
     comprar: 'https://wa.me/5511993957268?text=Quero%20comprar%20o%20quadro%20Aquário!',
     ml: false
   }
-  
 ];
 
 /* ---------- monta vitrine (cards) ---------- */
@@ -121,7 +120,7 @@ signos.forEach(s => {
       <a href="${s.nome}.html" class="noselect">
         <img
           src="${s.img}"
-          alt="Quadro ${s.titulo}"
+          alt="Quadro Signo ${s.titulo} 40x50 cm em canvas"
           class="quadro-thumb"
           loading="lazy"
           width="280"
@@ -163,7 +162,7 @@ async function abrirGaleria(signoNome) {
   hor.textContent = 'Carregando horóscopo…';
 
   dados.galeria.forEach(src => {
-    cont.insertAdjacentHTML('beforeend', `<img src="${src}" alt="Quadro ${dados.titulo}">`);
+    cont.insertAdjacentHTML('beforeend', `<img src="${src}" alt="Quadro ${dados.titulo} em ambiente">`);
   });
   document.getElementById('galeria-modal').style.display = 'block';
 
@@ -184,9 +183,11 @@ async function abrirGaleria(signoNome) {
     console.error(e);
   }
 }
+
 function fecharGaleria() {
   document.getElementById('galeria-modal').style.display = 'none';
 }
+
 window.onclick = e => {
   if (e.target.id === 'galeria-modal') fecharGaleria();
 };
