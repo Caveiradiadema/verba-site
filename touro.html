@@ -1,104 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Quadro Signo de Touro | VERBA — Art Nouveau</title>
-  <meta name="description" content="Quadro decorativo do signo de Touro em estilo Art Nouveau. Veja fotos ambientadas e o horóscopo de hoje traduzido." />
-  <meta name="robots" content="index,follow" />
-  <link rel="icon" href="icon.png" type="image/png" />
+  <!-- ========== SEO ========== -->
+  <title>Quadro Signo Touro 40×50 cm – Arte Art Nouveau | VERBA</title>
+  <link rel="canonical" href="https://caveiradiadema.github.io/verba-site/touro.html">
+  <meta name="description" content="Quadro exclusivo do signo Touro em estilo Art Nouveau, canvas 40×50 cm com moldura preta e vidro. Frete grátis e até 8× sem juros.">
+  <meta name="robots" content="index,follow">
 
-  <!-- fontes + CSS global -->
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type"        content="product">
+  <meta property="og:url"         content="https://caveiradiadema.github.io/verba-site/touro.html">
+  <meta property="og:title"       content="Quadro Signo Touro – Arte Art Nouveau | VERBA">
+  <meta property="og:description" content="Arte original em canvas premium 40×50 cm. Envio para todo o Brasil.">
+  <meta property="og:image"       content="https://caveiradiadema.github.io/verba-site/touro.png">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="0vvHOlYnK5VkuyUcSDhsUkcQHo8YVOo6EfoY0PBKaj4">
+
+  <!-- AdSense + GA4 -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-6341691198145403" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJVB1XHR7Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HJVB1XHR7Q');
+  </script>
+
+  <!-- Fonts + CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="style.css">
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- ===== CSS pontual (igual ao Áries) ===== -->
   <style>
-    .prod-wrapper{max-width:960px;margin:2rem auto 0;display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
-    .thumbs{display:flex;flex-direction:column;gap:.7rem;flex:0 0 72px}
-    .thumbs img{width:70px;height:70px;object-fit:cover;border-radius:4px;cursor:pointer;box-shadow:0 0 7px rgba(0,0,0,.6)}
-    .main-img{width:min(90vw,420px);border-radius:6px;box-shadow:0 0 12px rgba(0,0,0,.7)}
-    .produto-info{text-align:center;margin:1.8rem 0}
-    .parcel{font-size:1rem;color:#ccc;margin-top:-.3rem}
-    /* tooltip */
-    .tooltip{position:relative;display:inline-block}
-    .tooltiptext{visibility:hidden;opacity:0;transition:.25s;background:#1a1a1a;color:#ddd;padding:.8rem;border-radius:6px;max-width:320px;font-size:.85rem;position:absolute;left:50%;transform:translateX(-50%);bottom:125%;z-index:15}
-    .tooltip:hover .tooltiptext{visibility:visible;opacity:1}
-    /* navegação */
-    .nav-buttons{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
-    .btn-nav{padding:.6rem 1.4rem;font:600 .9rem/1 'Raleway',sans-serif;border:none;border-radius:4px;cursor:pointer}
-    .btn-prev{background:#d4af37;color:#0c0c0c}.btn-home{background:#222;color:#fff}.btn-next{background:#fff;color:#0c0c0c;border:1px solid #333}
-    .horoscopo{max-width:680px;margin:0 auto 3rem;white-space:pre-wrap;text-align:center;font-size:1rem;color:#ccc}
+    .galeria{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+    .thumbs{display:flex;flex-direction:column;gap:.5rem}
+    .thumbs img{width:70px;height:70px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid transparent;transition:.2s}
+    .thumbs img:hover{border-color:#d4af37}
+    #img-principal{max-width:350px;border-radius:6px;box-shadow:0 0 20px rgba(0,0,0,.6)}
+    .btn-nav{margin:.8rem .4rem;padding:.6rem 1.2rem;border-radius:4px;border:none;cursor:pointer;font-weight:600}
+    .btn-home{background:#333;color:#f5f5f5}
+    .btn-next{background:#d4af37;color:#0c0c0c}
+    .btn-prev{background:#f5f5f5;color:#0c0c0c}
+    .btn-home:hover{background:#444}
+    .btn-next:hover{background:#f7ce58}
+    .btn-prev:hover{background:#e0e0e0}
+    .produto-info{text-align:center;margin-top:1rem}
+    #horoscopo{max-width:700px;margin:2rem auto 4rem;text-align:center;white-space:pre-wrap;color:#ccc}
+
+    .breadcrumb{max-width:820px;margin:1rem auto;font-size:.9rem;color:#888}
+    .breadcrumb a{color:#d4af37;text-decoration:none}
+    .intro-produto{max-width:820px;margin:1.5rem auto;font-size:1rem;line-height:1.6}
   </style>
 </head>
 <body>
   <div id="particles-js"></div>
 
-  <header><img src="logo.png" alt="Logo VERBA" class="logo" loading="lazy"></header>
+  <!-- Header -->
+  <header data-aos="fade-down">
+    <a href="index.html"><img src="logo.png" alt="Logo VERBA" class="logo" width="140" height="140" loading="lazy"></a>
+    <p class="subtitle">Verbum · Expressio · Vox</p>
+  </header>
 
-  <h1>Quadro • Signo de Touro • Estilo Art Nouveau</h1>
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb" class="breadcrumb" data-aos="fade-up">
+    <a href="index.html">Home</a> › <a href="index.html#signos">Quadros de Signos</a> › Touro
+  </nav>
 
-  <!-- galeria -->
-  <section class="prod-wrapper">
-    <div class="thumbs">
-      <img src="touro.png"        alt="Quadro Touro"           onclick="trocarImg(this)">
-      <img src="tourosala1.png"   alt="Quadro Touro ambientado"onclick="trocarImg(this)">
-      <img src="tourosala2.png"   alt="Quadro Touro decorado"  onclick="trocarImg(this)">
+  <main class="produto" data-aos="fade-up">
+    <h1>Quadro Signo Touro 40×50 cm – Arte Art Nouveau</h1>
+
+    <!-- INTRO -->
+    <section class="intro-produto">
+      <p><strong>Touro</strong> simboliza estabilidade, sensorialidade e apreço pelo belo.
+         Para honrar essa força terrena, escolhemos o <em>Art Nouveau</em>,
+         movimento que celebra linhas orgânicas inspiradas na natureza. Arabescos
+         dourados contornam o icônico touro, enquanto tons verde‑oliva evocam prosperidade.</p>
+      <p>A obra mede <strong>40 × 50 cm</strong> e é impressa em
+         <em>canvas premium 380 g/m²</em> com pigmentos UV de longa duração.
+         Moldura preta fosca <strong>com vidro</strong> valoriza a textura. Cada peça é numerada e assinada,
+         enviada em até 2 dias úteis com <strong>frete grátis</strong> para todo o Brasil.
+         Pague em até 8 × sem juros.</p>
+      <p>Veja também a leveza impressionista do
+         <a href="peixes.html">Quadro Signo Peixes</a> ou a Bauhaus geométrica do
+         <a href="aries.html">Quadro Signo Áries</a>.</p>
+    </section>
+
+    <!-- Galeria -->
+    <div class="galeria">
+      <div class="thumbs">
+        <img src="touro.png"      alt="Miniatura Touro" onclick="trocarImagem('touro.png')">
+        <img src="tourosala1.png" alt="Touro ambientado 1" onclick="trocarImagem('tourosala1.png')">
+        <img src="tourosala2.png" alt="Touro ambientado 2" onclick="trocarImagem('tourosala2.png')">
+      </div>
+      <img id="img-principal" src="touro.png" alt="Quadro Signo Touro 40x50 cm em detalhe">
     </div>
-    <img id="main-img" class="main-img" src="touro.png" alt="Quadro Touro Art Nouveau">
-  </section>
 
-  <!-- preço / CTA -->
-  <section class="produto-info">
-    <p class="price">R$ 429,99</p>
-    <p class="parcel">em 8× R$ 53,75 sem juros</p>
+    <!-- Preço + CTA -->
+    <div class="produto-info">
+      <p class="price">
+        R$ 429,99<br><small>em 8× de R$ 53,75 sem juros</small>
+      </p>
 
-    <div class="tooltip">
       <a class="buy-btn"
          href="https://produto.mercadolivre.com.br/MLB-4123612691-quadro-touro-4050-cm-arte-art-nouveau-vidro-e-madeira-_JM"
          target="_blank" rel="noopener">
-         Comprar no Mercado Livre
-      </a>
-      <span class="tooltiptext">
-        • Proteção de Compra: receba ou seu dinheiro de volta.<br>
-        • Até 8× sem juros no cartão.<br>
-        • Pagamento seguro Mercado Pago.<br>
-        • Envio rastreado + suporte.
-      </span>
+        Comprar no Mercado Livre
+      </a><br><br>
+
+      <button class="ml-info" id="mlInfoBtn">Por que comprar pelo Mercado Livre?</button>
+      <div class="ml-tooltip" id="mlTooltip">
+        ✔️ Proteção ao Comprador – reembolso 100 % se algo der errado<br>
+        ✔️ Parcelamento em até 8 × sem juros via Mercado Pago<br>
+        ✔️ Envio rastreado e suporte 24 h
+      </div><br>
+
+      <button class="btn-nav btn-prev" onclick="location.href='peixes.html'">← Signo anterior</button>
+      <button class="btn-nav btn-home" onclick="location.href='index.html'">Voltar à Home</button>
+      <button class="btn-nav btn-next" onclick="location.href='gemeos.html'">Próximo signo →</button>
     </div>
+  </main>
+
+  <!-- FAQ -->
+  <section class="faq" data-aos="fade-up">
+    <details><summary><strong>Quais materiais são usados?</strong></summary>
+      <p>Canvas 380 g/m² e moldura pinus fosca.</p>
+    </details>
+    <details><summary><strong>O quadro já vai pronto para pendurar?</strong></summary>
+      <p>Sim, acompanha gancho dentado instalado.</p>
+    </details>
+    <details><summary><strong>Posso trocar se não gostar?</strong></summary>
+      <p>Você tem 7 dias corridos para devolução conforme CDC.</p>
+    </details>
   </section>
 
-  <!-- navegação -->
-  <nav class="nav-buttons">
-    <button class="btn-nav btn-prev" onclick="location.href='peixes.html'">← Signo anterior</button>
-    <button class="btn-nav btn-home" onclick="location.href='index.html'">Voltar à Home</button>
-    <button class="btn-nav btn-next" onclick="location.href='gemeos.html'">Próximo signo →</button>
-  </nav>
+  <!-- Horóscopo -->
+  <section id="horoscopo" data-aos="fade-up">Carregando horóscopo…</section>
 
-  <!-- horóscopo -->
-  <pre id="horoscopo" class="horoscopo">Carregando horóscopo…</pre>
+  <footer data-aos="fade-up">© 2025 VERBA — Todos os direitos reservados.</footer>
 
-  <footer>© 2025 VERBA — Todos os direitos reservados.</footer>
-
-  <!-- libs -->
+  <!-- Libs -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     AOS.init();
-    particlesJS('particles-js',{particles:{number:{value:60},size:{value:3},color:{value:'#ffffff'},line_linked:{enable:true,opacity:0.2,color:'#ffffff'},move:{speed:1}},interactivity:{events:{onhover:{enable:true,mode:'repulse'}}}});
+    particlesJS('particles-js',{
+      particles:{number:{value:60},size:{value:3},color:{value:'#ffffff'},
+      line_linked:{enable:true,opacity:0.2,color:'#ffffff'},move:{speed:1}},
+      interactivity:{events:{onhover:{enable:true,mode:'repulse'}}}
+    });
 
-    const trocarImg = el => document.getElementById('main-img').src = el.src;
+    function trocarImagem(src){ document.getElementById('img-principal').src = src; }
 
-    /* horóscopo */
-    (async ()=>{
-      const out=document.getElementById('horoscopo');
+    document.getElementById('mlInfoBtn').onclick = ()=> {
+      document.getElementById('mlTooltip').classList.toggle('show');
+    };
+
+    (async()=>{
       try{
-        const src='https://api.allorigins.win/raw?url='+encodeURIComponent('https://ohmanda.com/api/horoscope/taurus');
-        const {horoscope=''}=await (await fetch(src)).json();
-        const tr=await (await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q='+encodeURIComponent(horoscope))).json();
-        out.textContent='Horóscopo de hoje — TOURO:\n\n'+tr[0].map(t=>t[0]).join('');
-      }catch{out.textContent='Não foi possível carregar o horóscopo.';}
+        const url='https://api.allorigins.win/raw?url='+encodeURIComponent('https://ohmanda.com/api/horoscope/taurus');
+        const {horoscope}=await (await fetch(url)).json();
+        const trad=await (await fetch(
+          'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt-BR&dt=t&q='+encodeURIComponent(horoscope)
+        )).json();
+        const texto=trad[0].map(t=>t[0]).join('');
+        document.getElementById('horoscopo').textContent='Horóscopo de hoje – TOURO:\n\n'+texto;
+      }catch{
+        document.getElementById('horoscopo').textContent='Não foi possível carregar o horóscopo.';
+      }
     })();
+  </script>
+
+  <!-- Schema Product -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Quadro Touro 40×50 cm – Arte Art Nouveau",
+    "image":[
+      "https://caveiradiadema.github.io/verba-site/touro.png",
+      "https://caveiradiadema.github.io/verba-site/tourosala1.png",
+      "https://caveiradiadema.github.io/verba-site/tourosala2.png"
+    ],
+    "sku":"VBA-TO40x50",
+    "gtin":"7900000000003",
+    "description":"Quadro exclusivo do signo de Touro em estilo Art Nouveau, canvas premium 40×50 cm com moldura fosca e vidro.",
+    "brand":{"@type":"Brand","name":"VERBA"},
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"5"},
+    "offers":{
+      "@type":"Offer",
+      "url":"https://produto.mercadolivre.com.br/MLB-4123612691-quadro-touro-4050-cm-arte-art-nouveau-vidro-e-madeira-_JM",
+      "price":"429.99",
+      "priceCurrency":"BRL",
+      "availability":"https://schema.org/InStock"
+    }
+  }
   </script>
 </body>
 </html>

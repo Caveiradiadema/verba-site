@@ -1,217 +1,345 @@
 /* --------------- Reset básico --------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#0c0c0c;color:#f5f5f5;
+  font-family:'Raleway',sans-serif;overflow-x:hidden
 }
-body {
-  background: #0c0c0c;
-  color: #f5f5f5;
-  font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
+.noselect{user-select:none;-webkit-user-select:none}
+
+/* --------------- Estrutura global --------------- */
+#particles-js{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1}
+header{text-align:center;padding:2rem 2rem 1rem}
+header img.logo{max-width:140px;margin-bottom:.5rem}
+h1{
+  text-align:center;padding:1rem 2rem;
+  font-family:'Playfair Display',serif;font-size:2rem;color:#f5f5f5
+}
+main.vitrine{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:2rem;max-width:1200px;margin:2rem auto;padding:0 1rem 3rem
 }
 
-/* Evita seleção onde for aplicado */
-.noselect {
-  user-select: none;
-  -webkit-user-select: none; /* Safari / iOS */
+/* --------------- Cards (home) --------------- */
+.quadro-card{
+  background:#1a1a1a;border-radius:8px;padding:1rem;width:280px;text-align:center;
+  box-shadow:0 0 12px rgba(0,0,0,.6);transition:transform .3s
 }
-
-/* --------------- Estrutura --------------- */
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.quadro-card:hover{transform:scale(1.05)}
+.quadro-thumb{
+  width:100%;border-radius:5px;object-fit:cover;
+  box-shadow:0 6px 20px rgba(0,0,0,.5);cursor:pointer;transition:.4s
 }
-header {
-  text-align: center;
-  padding: 2rem 2rem 1rem;
+.quadro-thumb:hover{transform:scale(1.03)}
+.quadro-card h2{margin-top:1rem;font-size:1.2rem;color:#fff}
+.price{font-size:1.5rem;margin:1rem 0;color:#fff}
+.buy-btn{
+  background:#d4af37;color:#0c0c0c;border:none;
+  padding:.8rem 1.5rem;font-size:1rem;font-weight:bold;cursor:pointer;
+  border-radius:3px;text-decoration:none;display:inline-block;margin-bottom:.5rem
 }
-header img.logo {
-  max-width: 140px;
-  margin-bottom: .5rem;
-}
-h1 {
-  text-align: center;
-  padding: 1rem 2rem;
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #f5f5f5;
-}
-main.vitrine {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem 3rem;
-}
-
-/* --------------- Cards --------------- */
-.quadro-card {
-  background: #1a1a1a;
-  border-radius: 8px;
-  padding: 1rem;
-  width: 280px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(0, 0, 0, .6);
-  transition: transform .3s ease;
-}
-.quadro-card:hover { transform: scale(1.05); }
-
-.quadro-thumb {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .5);
-  cursor: pointer;
-  transition: all .4s ease;
-  user-select: none;
-  -webkit-user-select: none;
-}
-.quadro-thumb:hover { transform: scale(1.03); }
-
-.quadro-card h2 {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #fff;
-}
-.price {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  color: #fff;
-}
-
-.buy-btn {
-  background: #d4af37;
-  color: #0c0c0c;
-  border: none;
-  padding: .8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 3px;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: .5rem;
-}
-.buy-btn:hover { background: #f7ce58; }
+.buy-btn:hover{background:#f7ce58}
 
 /* --------------- Modal --------------- */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding: 3rem 1rem;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  background-color: rgba(0, 0, 0, .95);
+.modal{
+  display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;
+  padding:3rem 1rem;overflow-y:auto;background:rgba(0,0,0,.95)
 }
-.modal-conteudo {
-  max-width: 960px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+.modal-conteudo{
+  max-width:960px;margin:auto;
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:center
 }
-.modal-conteudo img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #000;
+.modal-conteudo img{
+  width:100%;max-width:300px;border-radius:8px;box-shadow:0 0 10px #000
 }
-.horoscopo {
-  width: 100%;
-  text-align: center;
-  color: #ccc;
-  margin-top: 2rem;
-  font-size: 1rem;
-  white-space: pre-wrap;
+.horoscopo{
+  width:100%;text-align:center;color:#ccc;margin-top:2rem;
+  font-size:1rem;white-space:pre-wrap
 }
-.fechar {
-  position: fixed;
-  top: 1rem;
-  right: 2rem;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10000;
+.fechar{position:fixed;top:1rem;right:2rem;font-size:2rem;color:#fff;cursor:pointer;z-index:10000}
+.share-btn{
+  background:transparent;color:#aaa;border:1px solid #777;padding:.4rem .8rem;
+  font-size:.9rem;border-radius:4px;cursor:pointer;margin-top:1rem
 }
-.share-btn {
-  background: transparent;
-  color: #aaa;
-  border: 1px solid #777;
-  padding: .4rem .8rem;
-  font-size: .9rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-.share-btn:hover { background: #333; }
+.share-btn:hover{background:#333}
 
 /* --------------- Rodapé & contato --------------- */
-.contact {
-  text-align: center;
-  padding: 3rem 2rem;
-}
-.contact a {
-  color: #d4af37;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: .9rem;
-  color: #777;
-}
+.contact{text-align:center;padding:3rem 2rem}
+.contact a{color:#d4af37;font-weight:bold;text-decoration:none;font-size:1.1rem}
+footer{text-align:center;padding:2rem;font-size:.9rem;color:#777}
 
 /* --------------- Responsivo --------------- */
-@media (max-width: 768px) {
-  h1 { font-size: 1.8rem; }
-  .quadro-card { width: 45%; }
-  .modal-conteudo { flex-direction: column; align-items: center; }
+@media(max-width:768px){
+  h1{font-size:1.8rem}
+  .quadro-card{width:45%}
+  .modal-conteudo{flex-direction:column;align-items:center}
 }
-@media (max-width: 480px) {
-  h1 { font-size: 1.5rem; }
-  .quadro-card { width: 90%; }
-}
-
-/* --------------- Tooltip Mercado Livre --------------- */
-.ml-info {
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: .6rem 1.2rem;
-  font: 600 .9rem/1 'Raleway', sans-serif;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: .8rem;
-}
-.ml-tooltip {
-  display: none;
-  max-width: 300px;
-  background: #1a1a1a;
-  color: #f5f5f5;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .7);
-  font-size: .9rem;
-  line-height: 1.4;
-  margin: 1rem auto 0;
+@media(max-width:480px){
+  h1{font-size:1.5rem}
+  .quadro-card{width:90%}
 }
 
-/* Desktop — mostra no hover */
-@media (hover: hover) {
-  .ml-info:hover + .ml-tooltip { display: block; }
+/* --------------- Tooltip ML --------------- */
+.ml-info{
+  background:#222;color:#fff;border:none;padding:.6rem 1.2rem;
+  font:600 .9rem/1 'Raleway',sans-serif;border-radius:4px;cursor:pointer;margin-top:.8rem
+}
+.ml-tooltip{
+  display:none;max-width:300px;background:#1a1a1a;color:#f5f5f5;padding:1rem;
+  border-radius:6px;box-shadow:0 0 10px rgba(0,0,0,.7);font-size:.9rem;line-height:1.4;margin:1rem auto 0
+}
+@media(hover:hover){.ml-info:hover + .ml-tooltip{display:block}}
+
+/* ============ ESTILOS PARA PÁGINAS DE PRODUTO ============ */
+
+/* Breadcrumb */
+.breadcrumb{
+  max-width:820px;margin:1rem auto;font-size:.9rem;color:#888
+}
+.breadcrumb a{color:#d4af37;text-decoration:none}
+
+/* Introdução */
+.intro-produto{
+  max-width:820px;margin:1.5rem auto;font-size:1rem;line-height:1.6
+}
+
+/* Galeria */
+.galeria{
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:1.5rem
+}
+.galeria img{width:100%;border-radius:6px;box-shadow:0 0 20px rgba(0,0,0,.6)}
+/* limite real da imagem principal */
+.galeria img#main-img{max-width:420px}
+.galeria .thumbs{display:flex;flex-direction:column;gap:.5rem}
+.galeria .thumbs img{
+  width:70px;height:70px;object-fit:cover;border-radius:4px;
+  cursor:pointer;border:2px solid transparent;transition:.2s
+}
+.galeria .thumbs img:hover{border-color:#d4af37}
+
+/* CTA e botões */
+.produto-info{
+  max-width:820px;          /* alinha com intro/FAQ */
+  margin:1.5rem auto;
+  text-align:center;
+}
+.produto-info .price{font-size:1.8rem;margin:0}
+.produto-info .buy-btn{margin-top:.8rem}
+.btn-nav{
+  margin:.8rem .4rem;padding:.6rem 1.2rem;border:none;border-radius:4px;cursor:pointer;font-weight:600
+}
+.btn-home{background:#333;color:#f5f5f5}
+.btn-next{background:#d4af37;color:#0c0c0c}
+.btn-home:hover{background:#444}
+.btn-next:hover{background:#f7ce58}
+
+[media pointer="file-service://file-QYkT4QU4aLdby95XDCsvqm"]
+quero os links amarelos não roxos:
+
+/* --------------- Reset básico --------------- */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#0c0c0c;color:#f5f5f5;
+  font-family:'Raleway',sans-serif;overflow-x:hidden
+}
+.noselect{user-select:none;-webkit-user-select:none}
+
+/* --------------- Estrutura global --------------- */
+#particles-js{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1}
+header{text-align:center;padding:2rem 2rem 1rem}
+header img.logo{max-width:140px;margin-bottom:.5rem}
+h1{
+  text-align:center;padding:1rem 2rem;
+  font-family:'Playfair Display',serif;font-size:2rem;color:#f5f5f5
+}
+main.vitrine{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:2rem;max-width:1200px;margin:2rem auto;padding:0 1rem 3rem
+}
+
+/* --------------- Cards (home) --------------- */
+.quadro-card{
+  background:#1a1a1a;border-radius:8px;padding:1rem;width:280px;text-align:center;
+  box-shadow:0 0 12px rgba(0,0,0,.6);transition:transform .3s
+}
+.quadro-card:hover{transform:scale(1.05)}
+.quadro-thumb{
+  width:100%;border-radius:5px;object-fit:cover;
+  box-shadow:0 6px 20px rgba(0,0,0,.5);cursor:pointer;transition:.4s
+}
+.quadro-thumb:hover{transform:scale(1.03)}
+.quadro-card h2{margin-top:1rem;font-size:1.2rem;color:#fff}
+.price{font-size:1.5rem;margin:1rem 0;color:#fff}
+.buy-btn{
+  background:#d4af37;color:#0c0c0c;border:none;
+  padding:.8rem 1.5rem;font-size:1rem;font-weight:bold;cursor:pointer;
+  border-radius:3px;text-decoration:none;display:inline-block;margin-bottom:.5rem
+}
+.buy-btn:hover{background:#f7ce58}
+
+/* --------------- Modal --------------- */
+.modal{
+  display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;
+  padding:3rem 1rem;overflow-y:auto;background:rgba(0,0,0,.95)
+}
+.modal-conteudo{
+  max-width:960px;margin:auto;
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:center
+}
+.modal-conteudo img{
+  width:100%;max-width:300px;border-radius:8px;box-shadow:0 0 10px #000
+}
+.horoscopo{
+  width:100%;text-align:center;color:#ccc;margin-top:2rem;
+  font-size:1rem;white-space:pre-wrap
+}
+.fechar{position:fixed;top:1rem;right:2rem;font-size:2rem;color:#fff;cursor:pointer;z-index:10000}
+.share-btn{
+  background:transparent;color:#aaa;border:1px solid #777;padding:.4rem .8rem;
+  font-size:.9rem;border-radius:4px;cursor:pointer;margin-top:1rem
+}
+.share-btn:hover{background:#333}
+
+/* --------------- Rodapé & contato --------------- */
+.contact{text-align:center;padding:3rem 2rem}
+.contact a{color:#d4af37;font-weight:bold;text-decoration:none;font-size:1.1rem}
+footer{text-align:center;padding:2rem;font-size:.9rem;color:#777}
+
+/* --------------- Responsivo --------------- */
+@media(max-width:768px){
+  h1{font-size:1.8rem}
+  .quadro-card{width:45%}
+  .modal-conteudo{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  h1{font-size:1.5rem}
+  .quadro-card{width:90%}
+}
+
+/* --------------- Tooltip ML --------------- */
+.ml-info{
+  background:#222;color:#fff;border:none;padding:.6rem 1.2rem;
+  font:600 .9rem/1 'Raleway',sans-serif;border-radius:4px;cursor:pointer;margin-top:.8rem
+}
+.ml-tooltip{
+  display:none;max-width:300px;background:#1a1a1a;color:#f5f5f5;padding:1rem;
+  border-radius:6px;box-shadow:0 0 10px rgba(0,0,0,.7);font-size:.9rem;line-height:1.4;margin:1rem auto 0
+}
+@media(hover:hover){.ml-info:hover + .ml-tooltip{display:block}}
+
+/* ============ ESTILOS PARA PÁGINAS DE PRODUTO ============ */
+
+/* Breadcrumb */
+.breadcrumb{
+  max-width:820px;margin:1rem auto;font-size:.9rem;color:#888
+}
+.breadcrumb a{color:#d4af37;text-decoration:none}
+
+/* Introdução */
+.intro-produto{
+  max-width:820px;margin:1.5rem auto;font-size:1rem;line-height:1.6
+}
+
+/* Galeria */
+.galeria{
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:1.5rem
+}
+.galeria img{width:100%;border-radius:6px;box-shadow:0 0 20px rgba(0,0,0,.6)}
+/* limite real da imagem principal */
+.galeria img#main-img{max-width:420px}
+.galeria .thumbs{display:flex;flex-direction:column;gap:.5rem}
+.galeria .thumbs img{
+  width:70px;height:70px;object-fit:cover;border-radius:4px;
+  cursor:pointer;border:2px solid transparent;transition:.2s
+}
+.galeria .thumbs img:hover{border-color:#d4af37}
+
+/* CTA e botões */
+.produto-info{
+  max-width:820px;          /* alinha com intro/FAQ */
+  margin:1.5rem auto;
+  text-align:center;
+}
+.produto-info .price{font-size:1.8rem;margin:0}
+.produto-info .buy-btn{margin-top:.8rem}
+.btn-nav{
+  margin:.8rem .4rem;padding:.6rem 1.2rem;border:none;border-radius:4px;cursor:pointer;font-weight:600
+}
+.btn-home{background:#333;color:#f5f5f5}
+.btn-next{background:#d4af37;color:#0c0c0c}
+.btn-home:hover{background:#444}
+.btn-next:hover{background:#f7ce58}
+
+/* ------------ FAQ DARK SLIM (Ajustes para reduzir margens) ------------ */
+.faq{
+  /* Mantido o max-width e margin para alinhamento e centralização */
+  max-width: 960px; /* Aumentado para reduzir margem lateral "branca" */
+  margin:2rem auto;
+}
+
+.faq details{
+  background:#1a1a1a;
+  color:#f5f5f5;
+  border:1px solid #101010; /* Exemplo: borda mais escura para quase sumir */
+  border-radius:6px;
+  margin:0 0 .3rem; /* Reduzido o espaço vertical entre os itens */
+  padding:0;
+  overflow:hidden;
+  transition:border-color .2s;
+}
+.faq details[open]{border-color:#d4af37;}
+
+.faq details summary{
+  list-style:none;
+  cursor:pointer;
+  user-select:none;
+  font-weight:600;
+  padding:.2rem .4rem .2rem 1.2rem; /* Reduzido padding interno do summary */
+  position:relative;
+  background:#1a1a1a;
+}
+.faq details summary::-webkit-details-marker{display:none;}
+.faq details summary::before{
+  content:"▸";
+  position:absolute;
+  left:.4rem; top:.25rem; /* Ajustada posição da seta */
+  font-size:.85rem;
+  transition:transform .2s;
+}
+.faq details[open] summary::before{transform:rotate(90deg);}
+
+.faq details > *:not(summary){
+  padding:.25rem 1.2rem .5rem 1.2rem; /* Reduzido padding interno do conteúdo */
+  font-size:.95rem;
+  line-height:1.45;
+  background:#1a1a1a;
+}
+/* Links dourados sempre */
+a,
+a:visited{
+  color:#d4af37 !important;
+  text-decoration:none;
+}
+a:hover{
+  color:#f7ce58 !important;
+}
+a:active{
+  color:#b9931f;
+}
+/* Links dourados só nos textos (intro/breadcrumb/faq), sem mexer nos botões */
+.breadcrumb a,
+.intro-produto a,
+.faq a {
+  color:#d4af37 !important;
+  text-decoration:none;
+}
+.breadcrumb a:hover,
+.intro-produto a:hover,
+.faq a:hover{
+  color:#f7ce58 !important;
+}
+
+/* garante que o botão continue com a cor correta mesmo visitado */
+.buy-btn,
+.buy-btn:visited{
+  color:#0c0c0c !important;
 }
